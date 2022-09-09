@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content=" Cộng đồng kinh doanh số UTO ">
+  <meta name="keywords" content="Cộng đồng kinh doanh, Sàn thương mại, Sàn công nghệ">
+  <meta name="author" content="UTO">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+  <meta property="og:image" content="https://uto.vn/storage/images/logo/og-img.jpg">
+  <meta property="og:image:alt" content="Cộng đồng kinh doanh số UTO">
+  <link rel="shortcut icon" type="image/x-icon" href="https://uto.vn/storage/images/logo/fav.png">
+  <title>ID_UTO</title>
+  <link rel="stylesheet" href="./assets/login.css">
+  <link rel="stylesheet" href="./assets/dangnhap.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css'>
+
+  <style>
+    .container {
+      display: block;
+      align-items: none;
+      justify-content: none;
+      min-height: auto;
+    }
+
+    .screen {
+      width: 370px;
+    }
+
+    .login {
+      padding: 15px !important;
+      padding-top: 79px;
+      min-height: 300px;
+      width: 100% !important;
+    }
+
+    .login__input {
+      font-size: 16px;
+      width: calc(100% - 10px);
+      padding-left: 35px;
+    }
+
+    .signin__icon {
+      position: absolute;
+      top: 4px;
+      color: #7875B5;
+      height: 16px;
+      bottom: 0px;
+      margin: auto;
+      left: 10px;
+      font-size: 20px;
+    }
+
+    button.button.login__submit {
+      width: 50%;
+      margin: auto;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="preloader">
+    <div class="wrapper-triangle">
+      <img src="/assets/img/load.gif" class="img-fluid" alt="...">
+    </div>
+  </div>
+
+
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+
+
+  <section class="bg-main">
+    <div id="particles-js"></div>
+
+    <!-- show popup -->
+    <div id="signup">
+      <div class="screen">
+        <div class="screen__content">
+          <form class="login">
+            <input type="hidden" name="_token" value="siHPhVd6jVnMJUv5BZWveOBrKwpbyl7HqZCkKFRj">
+            <div class="screen__content_logo"
+              style="background-image: url('https://uto.vn/storage/images/logo/logo.png')">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div>
+              <div class="d-flex">
+                <div class="signin__field">
+                  <i class="signin__icon fa-solid fa-circle-info"></i>
+                  <input type="text" class="login__input" v-model="form.fullname" placeholder="Họ và tên">
+                </div>
+                <div class="signin__field">
+                  <i class="signin__icon fa-solid fa-user"></i>
+                  <input type="text" class="login__input" v-model="form.username" placeholder="Tên đăng nhập">
+                </div>
+              </div>
+
+              <div class="d-flex">
+                <div class="signin__field">
+                  <i class="signin__icon fa-solid fa-lock"></i>
+                  <input type="password" class="login__input" v-model="form.password" placeholder="Mật khẩu">
+                </div>
+                <div class="signin__field">
+                  <i class="signin__icon fa-solid fa-lock"></i>
+                  <input type="password" class="login__input" v-model="form.repassword"
+                    placeholder="Xác nhận lại mật khẩu">
+                </div>
+              </div>
+              <div class="signin__field">
+                <i class="signin__icon fa-solid fa-paper-plane"></i>
+                <input type="text" class="login__input" v-model="form.email" placeholder="Email">
+              </div>
+              <div class="signin__field">
+                <i class="signin__icon fa-solid fa-user"></i>
+                <input type="text" class="login__input" v-model="form.sponsor"
+                  placeholder="Tên đăng nhập người giới thiệu">
+              </div>
+
+              <div class="signin__field uto-dk">
+                Bằng việc nhấn nút Đăng ký, bạn đã đồng ý với <a href="" target="_blank">điều khoản sử dụng</a> và <a
+                  href="" target="_blank">chính sách bảo mật</a> của UTO.
+              </div>
+
+              <button class="button login__submit" type="button" @click="signin">
+                <span class="button__text">Đăng ký</span>
+                <i class="button__icon fa fa-chevron-right"></i>
+              </button>
+
+            </div>
+
+          </form>
+         
+
+
+       
+        </div>
+        <div class="screen__background"><span class="screen__background__shape screen__background__shape4"></span>
+          <span class="screen__background__shape screen__background__shape3"></span> <span
+            class="screen__background__shape screen__background__shape2"></span> <span
+            class="screen__background__shape screen__background__shape1"></span></div>
+      </div>
+    </div>
+    <!-- end show popup -->
+
+
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-header navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="/assets/img/logo-white.png" class="img-logo-header" alt="...">
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="menu-title">
+              <nav class="menu">
+                <a href="#mo-hinh" class="menu-item">Mô hình bán hàng</a>
+                <a href="#dac-tinh" class="menu-item">Đặc tính nổi bật</a>
+               
+                <div class="dropdown">
+                  <button class="dropbtn" for="btnControl">Dành cho thành viên</button>
+                  <div class="dropdown-content">
+                    <a href="#">Thành viên vip</a>
+                    <a href="#">Đối tác cá nhân</a>
+                  </div>
+                </div>
+                <a href="#nha-cung-cap" class="menu-item">Dành cho nhà cung cấp</a>
+                <a href="#giai-phap" class="menu-item">Giải pháp viral</a>
+                <a href="#chinh-sach" class="menu-item">Chính sách</a>
+
+              </nav>
+
+              <span class="navbar-text text-title-uto">
+                <a href="./register.html">Đăng Ký</a>
+                <span> | </span>
+                <a href="./login.html">Đăng Nhập</a>
+              </span>
+            </div>
+          </div>
+
+        </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <main>
+      <div class="container wow bounceInLeft">
+        <div class="video-uto text-center wow bounceInLeft">
+          <iframe height="400" src="https://www.youtube.com/embed/Uy7V3TvfTTg" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="title-uto">
+          <h1 class="mt-4 wow pulse  animated" data-wow-duration="1.8s" data-wow-delay=".2s"
+            data-wow-iteration="infinite">
+            BÁN HÀNG ONLINE</h1>
+
+          <div class="wrapper">
+            <h2 class="is-visible">"KHÔNG CẦN VỐN"</h2>
+            <h2 class="is-visible">"ĐÀO TẠO A-Z"</h2>
+          </div>
+
+          <p>Thật đơn giản để có thêm nguồn thu nhập thứ hai bằng việc bán hàng với thời gian rảnh tại nhà lên đến
+            10.000.000đ/tháng</p>
+
+          <img class="img-gift" src="/assets/img/gift/run-gif.gif" alt="">
+          <div class="line-hr"></div>
+
+
+        </div>
+
+        <!-- =========== -->
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="btn-subcribe-wrapper">
+              <div class=" button-reg hvr-float-shadow">
+                <p>đăng ký cộng tác viên</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"
+                  viewBox="0 0 24 24" class="cricle-spin" fill="white">
+                  <path
+                    d="M10.59,13.41C11,13.8 11,14.44 10.59,14.83C10.2,15.22 9.56,15.22 9.17,14.83C7.22,12.88 7.22,9.71 9.17,7.76V7.76L12.71,4.22C14.66,2.27 17.83,2.27 19.78,4.22C21.73,6.17 21.73,9.34 19.78,11.29L18.29,12.78C18.3,11.96 18.17,11.14 17.89,10.36L18.36,9.88C19.54,8.71 19.54,6.81 18.36,5.64C17.19,4.46 15.29,4.46 14.12,5.64L10.59,9.17C9.41,10.34 9.41,12.24 10.59,13.41M13.41,9.17C13.8,8.78 14.44,8.78 14.83,9.17C16.78,11.12 16.78,14.29 14.83,16.24V16.24L11.29,19.78C9.34,21.73 6.17,21.73 4.22,19.78C2.27,17.83 2.27,14.66 4.22,12.71L5.71,11.22C5.7,12.04 5.83,12.86 6.11,13.65L5.64,14.12C4.46,15.29 4.46,17.19 5.64,18.36C6.81,19.54 8.71,19.54 9.88,18.36L13.41,14.83C14.59,13.66 14.59,11.76 13.41,10.59C13,10.2 13,9.56 13.41,9.17Z">
+                  </path>
+                </svg>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <div class="btn-subcribe-wrapper left">
+              <div class=" button-reg11 hvr-float-shadow">
+                <p>đăng ký nhà cung cấp</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"
+                  viewBox="0 0 24 24" class="cricle-spin" fill="rgb(0 102 187)">
+                  <path
+                    d="M10.59,13.41C11,13.8 11,14.44 10.59,14.83C10.2,15.22 9.56,15.22 9.17,14.83C7.22,12.88 7.22,9.71 9.17,7.76V7.76L12.71,4.22C14.66,2.27 17.83,2.27 19.78,4.22C21.73,6.17 21.73,9.34 19.78,11.29L18.29,12.78C18.3,11.96 18.17,11.14 17.89,10.36L18.36,9.88C19.54,8.71 19.54,6.81 18.36,5.64C17.19,4.46 15.29,4.46 14.12,5.64L10.59,9.17C9.41,10.34 9.41,12.24 10.59,13.41M13.41,9.17C13.8,8.78 14.44,8.78 14.83,9.17C16.78,11.12 16.78,14.29 14.83,16.24V16.24L11.29,19.78C9.34,21.73 6.17,21.73 4.22,19.78C2.27,17.83 2.27,14.66 4.22,12.71L5.71,11.22C5.7,12.04 5.83,12.86 6.11,13.65L5.64,14.12C4.46,15.29 4.46,17.19 5.64,18.36C6.81,19.54 8.71,19.54 9.88,18.36L13.41,14.83C14.59,13.66 14.59,11.76 13.41,10.59C13,10.2 13,9.56 13.41,9.17Z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <!-- ============ -->
+
+        <div class="row ">
+          <div class="col-lg-4 col-md-6 col-12 col-custom ">
+            <div class="bg-content">
+              <div class="border-content">
+                <div class="svg-custom">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns:serif="http://www.serif.com/" viewBox="0 0 32 32" version="1.1" xml:space="preserve" style=""
+                    x="0px" y="0px" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                    stroke-miterlimit="2" preserveAspectRatio="none" width="100%" height="100%" class=""
+                    fill="rgb(0 102 187)">
+                    <path
+                      d="M30.5,9.319c0,-0.276 -0.224,-0.5 -0.5,-0.5l-4,-0c-0.276,-0 -0.5,0.224 -0.5,0.5l0,18c0,0.276 0.224,0.5 0.5,0.5l4,-0c0.276,-0 0.5,-0.224 0.5,-0.5l0,-18Zm-24,8.75c0,-0.276 -0.224,-0.5 -0.5,-0.5l-4,-0c-0.276,-0 -0.5,0.224 -0.5,0.5l0,9.25c0,0.276 0.224,0.5 0.5,0.5l4,-0c0.276,-0 0.5,-0.224 0.5,-0.5l0,-9.25Zm12,-0.75c0,-0.276 -0.224,-0.5 -0.5,-0.5l-4,-0c-0.276,-0 -0.5,0.224 -0.5,0.5l0,10c0,0.276 0.224,0.5 0.5,0.5l4,-0c0.276,-0 0.5,-0.224 0.5,-0.5l0,-10Zm-6,-2c0,-0.276 -0.224,-0.5 -0.5,-0.5l-4,-0c-0.276,-0 -0.5,0.224 -0.5,0.5l0,12c0,0.276 0.224,0.5 0.5,0.5l4,-0c0.276,-0 0.5,-0.224 0.5,-0.5l0,-12Zm12,-3.5c0,-0.276 -0.224,-0.5 -0.5,-0.5l-4,-0c-0.276,-0 -0.5,0.224 -0.5,0.5l0,15.5c0,0.276 0.224,0.5 0.5,0.5l4,-0c0.276,-0 0.5,-0.224 0.5,-0.5l0,-15.5Zm-19,6.75l0,8.25c-0,-0 -3,-0 -3,-0c-0,-0 0,-8.25 0,-8.25l3,-0Zm18,-6.25l0,14.5c-0,-0 -3,-0 -3,-0c0,-0 0,-14.5 0,-14.5l3,-0Zm-6,5.5l0,9c-0,-0 -3,-0 -3,-0c0,-0 0,-9 0,-9l3,-0Zm-6,-2l0,11c-0,-0 -3,-0 -3,-0c0,-0 0,-11 0,-11l3,-0Zm18,-6l0,17c-0,-0 -3,-0 -3,-0c0,-0 0,-17 0,-17l3,-0Zm-2.536,-4.392l-5.177,2.44c-0.022,0.01 -0.044,0.022 -0.064,0.036l-5.836,3.89c0,0 -5.805,-0.967 -5.805,-0.967c-0.104,-0.018 -0.211,-0.002 -0.306,0.046l-6,3c-0.246,0.123 -0.347,0.424 -0.223,0.671c0.123,0.246 0.424,0.347 0.671,0.223l5.854,-2.927c0,-0 5.84,0.973 5.84,0.973c0.125,0.021 0.254,-0.007 0.359,-0.077l5.97,-3.98l5.46,-2.573l-0.297,1.688c-0.047,0.272 0.134,0.531 0.406,0.579c0.272,0.048 0.531,-0.134 0.579,-0.406l0.49,-2.785c0.048,-0.272 -0.134,-0.532 -0.406,-0.579l-2.785,-0.49c-0.272,-0.048 -0.531,0.134 -0.579,0.405c-0.048,0.272 0.134,0.532 0.406,0.58l1.443,0.253Z">
+                    </path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"
+                    viewBox="0 0 1920 1896.0833" class="" fill="rgb(0 102 187)">
+                    <path
+                      d="M593 896q-162 5-265 128H194q-82 0-138-40.5T0 865q0-353 124-353 6 0 43.5 21t97.5 42.5T384 597q67 0 133-23-5 37-5 66 0 139 81 256zm1071 637q0 120-73 189.5t-194 69.5H523q-121 0-194-69.5T256 1533q0-53 3.5-103.5t14-109T300 1212t43-97.5 62-81 85.5-53.5T602 960q10 0 43 21.5t73 48 107 48 135 21.5 135-21.5 107-48 73-48 43-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zM640 256q0 106-75 181t-181 75-181-75-75-181 75-181T384 0t181 75 75 181zm704 384q0 159-112.5 271.5T960 1024 688.5 911.5 576 640t112.5-271.5T960 256t271.5 112.5T1344 640zm576 225q0 78-56 118.5t-138 40.5h-134q-103-123-265-128 81-117 81-256 0-29-5-66 66 23 133 23 59 0 119-21.5t97.5-42.5 43.5-21q124 0 124 353zm-128-609q0 106-75 181t-181 75-181-75-75-181 75-181 181-75 181 75 75 181z">
+                    </path>
+                  </svg>
+                </div>
+
+                <div class="content-price">
+                  <h3 id="count1">2.000.000</h3>
+                  <p>Người tiêu dùng và nhà phân phối chính thức</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 col-custom ">
+            <div class="bg-content">
+              <div class="border-content">
+                <div class="svg-custom">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns:serif="http://www.serif.com/" viewBox="0 0 32 32" version="1.1" xml:space="preserve" style=""
+                    x="0px" y="0px" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                    stroke-miterlimit="2" preserveAspectRatio="none" width="100%" height="100%" class=""
+                    fill="rgb(0 102 187)">
+                    <path
+                      d="M28.562,26.206c-0,-0.276 -0.224,-0.5 -0.5,-0.5l-24.124,-0c-0.276,-0 -0.5,0.224 -0.5,0.5l0,3.973c0,0.276 0.224,0.5 0.5,0.5l24.124,0c0.276,0 0.5,-0.224 0.5,-0.5l-0,-3.973Zm-1,0.5l-0,2.973c-0,0 -23.124,0 -23.124,0c0,0 0,-2.973 0,-2.973l23.124,-0Zm-13.312,-11.706l-0,9c0,0.276 0.224,0.5 0.5,0.5c0.276,-0 0.5,-0.224 0.5,-0.5l-0,-9c0,-0.276 -0.224,-0.5 -0.5,-0.5c-0.276,-0 -0.5,0.224 -0.5,0.5Zm8.75,-0l-0,9c0,0.276 0.224,0.5 0.5,0.5c0.276,-0 0.5,-0.224 0.5,-0.5l-0,-9c0,-0.276 -0.224,-0.5 -0.5,-0.5c-0.276,-0 -0.5,0.224 -0.5,0.5Zm2.5,-0l-0,9c0,0.276 0.224,0.5 0.5,0.5c0.276,-0 0.5,-0.224 0.5,-0.5l-0,-9c0,-0.276 -0.224,-0.5 -0.5,-0.5c-0.276,-0 -0.5,0.224 -0.5,0.5Zm-17.5,0l0,9c-0,0.276 0.224,0.5 0.5,0.5c0.276,0 0.5,-0.224 0.5,-0.5l0,-9c-0,-0.276 -0.224,-0.5 -0.5,-0.5c-0.276,0 -0.5,0.224 -0.5,0.5Zm-2.5,0l0,9c-0,0.276 0.224,0.5 0.5,0.5c0.276,0 0.5,-0.224 0.5,-0.5l0,-9c-0,-0.276 -0.224,-0.5 -0.5,-0.5c-0.276,0 -0.5,0.224 -0.5,0.5Zm11.25,-0l-0,9c0,0.276 0.224,0.5 0.5,0.5c0.276,-0 0.5,-0.224 0.5,-0.5l-0,-9c0,-0.276 -0.224,-0.5 -0.5,-0.5c-0.276,-0 -0.5,0.224 -0.5,0.5Zm11.812,-7.13c-0,-0.189 -0.107,-0.361 -0.275,-0.446l-12.062,-6.074c-0.142,-0.071 -0.308,-0.071 -0.45,-0l-12.062,6.074c-0.168,0.085 -0.275,0.257 -0.275,0.446l0,4.63c0,0.276 0.224,0.5 0.5,0.5l24.124,-0c0.276,-0 0.5,-0.224 0.5,-0.5l-0,-4.63Zm-1,0.308l-0,3.822c-0,0 -23.124,0 -23.124,0c0,-0 0,-3.822 0,-3.822c0,0 11.562,-5.822 11.562,-5.822l11.562,5.822Zm-11.562,-3.178c-1.656,-0 -3,1.344 -3,3c-0,1.656 1.344,3 3,3c1.656,0 3,-1.344 3,-3c-0,-1.656 -1.344,-3 -3,-3Zm-0,1c1.104,0 2,0.896 2,2c-0,1.104 -0.896,2 -2,2c-1.104,0 -2,-0.896 -2,-2c-0,-1.104 0.896,-2 2,-2Z">
+                    </path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"
+                    viewBox="0 0 24 24" class="" fill="rgb(0 102 187)">
+                    <path d="M11.5,1L2,6V8H21V6M16,10V17H19V10M2,22H21V19H2M10,10V17H13V10M4,10V17H7V10H4Z"></path>
+                  </svg>
+                </div>
+
+                <div class="content-price">
+                  <h3 id="count2">300</h3>
+                  <p>Nhà sản xuất, cung cấp sản phẩm uy tín</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 col-custom ">
+            <div class="bg-content">
+              <div class="border-content">
+                <div class="svg-custom">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"
+                    viewBox="0 0 1792 1896.0833" class="" fill="rgb(0 102 187)">
+                    <path
+                      d="M896 1629l640-349V644L896 877v752zm-64-865l698-254-698-254-698 254zm832-252v768q0 35-18 65t-49 47l-704 384q-28 16-61 16t-61-16L67 1392q-31-17-49-47t-18-65V512q0-40 23-73t61-47l704-256q22-8 44-8t44 8l704 256q38 14 61 47t23 73z">
+                    </path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"
+                    viewBox="0 0 2304 1896.0833" class="" fill="rgb(0 102 187)">
+                    <path
+                      d="M640 1632l384-192v-314l-384 164v342zm-64-454l404-173-404-173-404 173zm1088 454l384-192v-314l-384 164v342zm-64-454l404-173-404-173-404 173zm-448-293l384-165V454l-384 164v267zm-64-379l441-189-441-189-441 189zm1088 518v416q0 36-19 67t-52 47l-448 224q-25 14-57 14t-57-14l-448-224q-5-2-7-4-2 2-7 4l-448 224q-25 14-57 14t-57-14L71 1554q-33-16-52-47t-19-67v-416q0-38 21.5-70T78 906l434-186V320q0-38 21.5-70t56.5-48l448-192q23-10 50-10t50 10l448 192q35 16 56.5 48t21.5 70v400l434 186q36 16 57 48t21 70z">
+                    </path>
+                  </svg>
+                </div>
+
+                <div class="content-price">
+                  <h3 id="count3">1.000</h3>
+                  <p>Sản phẩm chính hãng giá tốt</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </main>
+  </section>
+
+
+  <section class="position-relative-custom wow bounceInLeft">
+    <div class="overflow-shape">
+      <!-- <div class="ladi-shape3"></div>
+      <div class="ladi-shape4"></div> -->
+      <div class="ladi-shape5"></div>
+      <!-- <div class="ladi-shape6"></div> -->
+    </div>
+    <main>
+      <div class="container">
+
+
+
+        <div class="title-uto-2">
+          <h1>Kiến Tạo Nguồn Thu Nhập Thứ Hai</h1>
+          <h3>Với Một Chiếc Smartphone KHÔNG CẦN BỎ VỐN</h3>
+        </div>
+
+        <div class="row d-flex justify-content-center align-items-center">
+
+          <div class="col-lg-5 col-md-5 col-12">
+            <img src="/assets/img/bg-content.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-1 col-md-1 col-12"></div>
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="text-content2">
+              <h4>UTO.VN - Bán hàng không vốn</h4>
+              <h2>BẮT ĐẦU BÁN HÀNG THẬT DỂ DÀNG VỚI VÀI THAO TÁC ĐƠN GIẢN</h2>
+              <p>Uto.vn - nền tảng kết nối các nhà cung cấp nguồn hàng từ nhà sản xuất đến với người có nhu cầu bán hàng
+                mà không cần bỏ vốn nhập hàng.</p>
+            </div>
+
+            <div class="button-reg-2">
+              <a id="target" >Đăng ký thành viên bán hàng cùng uto.vn tại đây</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row ">
+          <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="price-content1">
+              <img src="/assets/img/price1.png" class="img-fluid" alt="">
+              <div class="price-text1">
+                <h4>CHIẾT KHẤU CAO THEO ĐƠN HÀNG</h4>
+                <p>Hơn 1.000 sản phẩm chất lượng được kiểm duyệt từ các nhà cung cấp uy tín<br>
+                  <span style="color: rgb(232, 104, 48);">Với mức chiết khấu
+                    lên đến 60%
+                  </span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="price-content1">
+              <img src="/assets/img/price2.png" class="img-fluid" alt="">
+              <div class="price-text1">
+                <h4>BÁN HÀNG 4 "KHÔNG"</h4>
+                <p><span style="color: rgb(232, 104, 48);">KHÔNG</span> cần bỏ vốn nhập hàng<br>
+                  <span style="color: rgb(232, 104, 48);">KHÔNG</span> lưu trữ tồn kho<br>
+                  <span style="color: rgb(232, 104, 48);">KHÔNG</span> lo vận chuyển<br>
+                  <span style="color: rgb(232, 104, 48);">KHÔNG</span> cần kinh nghiệm<br>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="price-content1">
+              <img src="/assets/img/price3.png" class="img-fluid" alt="">
+              <div class="price-text1">
+                <h4>MỌI LÚC - MỌI NƠI</h4>
+                <p>Làm việc bất cứ nơi đâu, vào thời gian rảnh. Với chính ưu đãi độc đáo. Mang lại nguồn thu nhập mơ ước
+                  và xứng đáng với những nỗ lực mà bạn bỏ ra.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <section class="bg-main2" id="mo-hinh">
+    <div class="container">
+
+      <div class="title-uto-3">
+        <img src="/assets/img/7.svg" alt="..." class="img-fluid img-svg7">
+
+        <div class="item-content-3 wow bounceInLeft">
+          <h2>Mô Hình Bán Hàng Tại</h2>
+          <h3>UTO.VN</h3>
+          <p style="color: #000">
+            " Mô hình bán hàng thông minh tại UTO chủ động thời gian làm việc, không cần phải quá giỏi kinh doanh để bắt
+            đầu và không cần vốn nhập hàng. Giảm thiểu rủi ro đến mức tối đa và phá bỏ mọi rào cản về kiến thức kinh tế,
+            khó khăn của kinh doanh truyền thống "
+          </p>
+          <p class="test-custom" style="color: rgb(232, 104, 48); font-weight: bold;">Tự tin khởi nghiệp tại UTO.VN</p>
+        </div>
+        <img src="/assets/img/mohinh.png" alt="..." class="img-fluid img-border">
+      </div>
+
+
+
+
+      <!-- =========== -->
+    </div>
+    </div>
+  </section>
+
+  <section class="bg-sodo1" id="dac-tinh">
+
+    <div class="container">
+      <div class="ladi-shape7"></div>
+      <div class="title-uto-9">
+
+        <h2 class="text-dark wow bounceInLeft pt-4" data-wow-delay=".2s">
+          <span style="color: rgb(232, 104, 48);">Đặc Tính Nổi Bật</span>
+          Của Nền Tảng Công Nghệ Vận Hành Và Quản Lý
+        </h2>
+
+        <h1 class="wow bounceInLeft" data-wow-delay=".4s">
+          <div class=" wow pulse  animated animated " data-wow-duration="1.8s" data-wow-delay=".2s"
+            data-wow-iteration="infinite"> Website Phân Quyền </div>
+        </h1>
+
+        <h3 style="color: rgb(232, 104, 48); margin-bottom: 20px;">Giải Pháp "Chuyển Đổi Số" <span
+            style="color: #000000"> Phá Bỏ Mọi
+            rào cản<br> mà doanh nghiệp đang tìm kiếm</span></h3>
+        <!-- ========================== -->
+
+        <div class="row ">
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3 wow bounceInDown" data-wow-delay=".2s">
+            <div class="web-content1">
+              <img src="/assets/img/web1.png" class="img-fluid" alt="">
+              <div class="price-text1">
+                <p>Tích hợp phần mềm<span style="color: rgb(232, 104, 48);"> CRM </span> đa dụng, dễ dàng quản lý thông
+                  tin khách hàng, sản phẩm, nhân viên, báo cáo vận hành chính xác</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3 wow bounceInDown" data-wow-delay=".2s">
+            <div class="web-content1">
+              <img src="/assets/img/web2.png" class="img-fluid" alt="">
+              <div class="price-text1">
+                <p>Website bán hàng<span style="color: rgb(232, 104, 48);"> tự động tối ưu SEO </span> trên các nền tảng
+                  tìm kiếm</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3 wow bounceInDown" data-wow-delay=".2s">
+            <div class="web-content1">
+              <img src="/assets/img/web3.png" class="img-fluid" alt="">
+              <div class="price-text1">
+                <p>Sở hữu <span style="color: rgb(232, 104, 48);"> website với tên miền và hosting hoàn toàn miễn phí
+                  </span> và <span style="color: rgb(232, 104, 48);">tạo ra nhiều website khác</span>
+                  trên duy nhất 1 nền tảng</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3 wow bounceInUp" data-wow-delay=".2s">
+            <div class="web-content1">
+              <img src="/assets/img/web4.png" class="img-fluid" alt="">
+              <div class="price-text1">
+                <p>Có sẵn hàng ngàn sản phẩm, dịch vụ uy tín, chất lượng cao để <span style="color: rgb(232, 104, 48);">
+                    bắt đầu kinh doanh mà không cần phải lo vốn nhập hàng </span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3 wow bounceInUp" data-wow-delay=".2s">
+            <div class="web-content1">
+              <img src="/assets/img/web5.png" class="img-fluid" alt="">
+              <div class="price-text1">
+                <p>Tích hợp sẵn <span style="color: rgb(232, 104, 48);">
+                    nhiều đơn vị vận chuyển </span> và <span style="color: rgb(232, 104, 48);">
+                    phần mềm cập nhật tình trạng đơn hàng, lộ trình giao hàng chính xác </span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3 wow bounceInUp" data-wow-delay=".2s">
+            <div class="web-content1">
+              <img src="/assets/img/web6.png" class="img-fluid" alt="">
+              <div class="price-text1">
+                <p>Website được <span style="color: rgb(232, 104, 48);">
+                    trang bị sẵn kho giao diện và tiện ích đẹp nhất </span> giúp <span
+                    style="color: rgb(232, 104, 48);">
+                    khách hàng của bạn có sự trải nghiệm mua sắm tốt nhất </span></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="container pb-5" id="nha-cung-cap">
+        <div class="title-uto-4 wow bounceInLeft">
+          <h2>Dành Cho Nhà Cung Cấp</h2>
+          <p class="text-dark">Uto là điểm kết nối sản phẩm của bạn đến với tay người tiêu dùng một cách nhanh và<br>
+            hiệu quả
+            nhất mà không cần
+            phải tốn một đồng Marketing!
+            Tại sao bạn vẫn chưa liên hệ ngay với Uto?</p>
+        </div>
+        <!-- ======================================== -->
+        <div class="row  d-flex justify-content-center align-items-center wow bounceInLeft">
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="bg-timeline-items custom-bg-id ">
+              <div class="timeline-content timeline-repon-daily">
+                <h3>100.000</h3>
+                <p>
+                  NHÀ PHÂN PHỐI
+                  (Đại lý & cộng tác viên)
+                  trên toàn quốc
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="bg-timeline-items custom-bg-id3 ">
+              <div class="timeline-content timeline-repon-thegioi">
+                <h3>Tiết Kiệm Chi Phí Vận Hành</h3>
+                <p>
+                  Doanh nghiệp tiết kiệm được rất nhiều chi phí về kho bãi, đóng gói, vận chuyển, nhân lực, khâu tiếp
+                  nhận, phản hồi và chăm sóc khách hàng
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="bg-timeline-items custom-bg-id2">
+              <div class="timeline-content timeline-repon-doitac">
+                <h3>Giải Pháp Marketing 0đ</h3>
+                <p>
+                  Sản phẩm được tiếp cận trực tiếp 2 triệu khách hàng tiềm năng và hiển thị ngay trang chủ của 300
+                  website
+                  của UTO
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+        <div class="hr-line wow bounceInLeft">
+          <div class="icon1"></div>
+          <div class="icon1"></div>
+          <div class="icon2"></div>
+        </div>
+
+
+        <div class="button-reg-3 wow bounceInLeft">
+          <a href="#">Trở thành nhà cung cấp sản phẩm chính thức cùng UTO</a>
+        </div>
+
+
+  </section>
+
+  <section class="bg-giaiphap" id="giai-phap">
+    <div class="container">
+      <div class="title-uto-6">
+        <p class="p-title1">Giải Pháp
+          <span class="span-title1"> Đột Phá Viral</span>
+        </p>
+        <p class="span-title1">Marketing Tổng Thể
+          <span class="p-title1"> Cho Doanh Nghiệp</span>
+        </p>
+      </div>
+
+
+
+
+      <div class="background-sodo"></div>
+
+      <!-- <div class="img-sodo" style="text-align: center;">
+        <img src="/assets/img/sodo/sodo1.png" alt="..." class="img-fluid my-5 wow bounceInLeft" data-wow-delay=".2s">
+        <img src="/assets/img/sodo/sodo.png" alt="..." class="img-fluid my-5 wow bounceInLeft" data-wow-delay=".2s">
+        <img src="/assets/img/sodo/sodo2.png" alt="..." class="img-fluid my-5 wow bounceInLeft" data-wow-delay=".8s">
+        <img src="/assets/img/sodo/sodo3.png" alt="..." class="img-fluid my-5 wow bounceInRight" data-wow-delay=".8s">
+        <img src="/assets/img/sodo/sodo4.png" alt="..." class="img-fluid my-5 wow bounceInUp" data-wow-delay=".6s">
+        <img src="/assets/img/sodo/sodo5.png" alt="..." class="img-fluid my-5 wow bounceInDown" data-wow-delay=".6s">
+        <div class="text-sodo">
+          <p class="wow bounceInDown" data-wow-delay="1.2s">Quảng cáo, sự kiện ...</p>
+          <p class="wow bounceInDown" data-wow-delay="1.2s">Viral, Pr ...</p>
+          <p class="wow bounceInUp" data-wow-delay="1.6s">Affilate Marketing</p>
+          <p class="wow bounceInUp" data-wow-delay="1.6s">Tăng Hiển Thị</p>
+        </div>
+      </div> -->
+
+
+
+      <div class="icon-uto-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"
+          viewBox="0 0 1792 1896.0833" class="" fill="#000">
+          <path
+            d="M256 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm1408-576q0-51-39-89.5t-89-38.5H960q0-20 15-48.5t33-55 33-68 15-84.5q0-67-44.5-97.5T896 256q-24 0-90 139-24 44-37 65-40 64-112 145-71 81-101 106-69 57-140 57h-32v640h32q72 0 167 32t193.5 64 179.5 32q189 0 189-167 0-26-5-56 30-16 47.5-52.5t17.5-73.5-18-69q53-50 53-119 0-25-10-55.5t-25-47.5h331q52 0 90-38t38-90zm128-1q0 105-75.5 181t-180.5 76h-169q-4 62-37 119 3 21 3 43 0 101-60 178 1 139-85 219.5T961 1664q-133 0-322-69-164-59-223-59H128q-53 0-90.5-37.5T0 1408V768q0-53 37.5-90.5T128 640h288q10 0 21.5-4.5t23.5-14 22.5-18 24-22.5 20.5-21.5 19-21.5 14-17q65-74 100-129 13-21 33-62t37-72 40.5-63 55-49.5T896 128q125 0 206.5 67t81.5 189q0 68-22 128h374q104 0 180 76t76 179z">
+          </path>
+        </svg>
+        <p>Tối ưu hóa nhận diện thương hiệu và nhận biết sản phẩm, hình thành tệp khách hàng để chuyển đổi cho doanh
+          nghiệp, biến người theo dõi thành khách hàng
+        </p>
+      </div>
+
+      <div class="icon-uto-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"
+          viewBox="0 0 1792 1896.0833" class="" fill="#000">
+          <path
+            d="M256 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm1408-576q0-51-39-89.5t-89-38.5H960q0-20 15-48.5t33-55 33-68 15-84.5q0-67-44.5-97.5T896 256q-24 0-90 139-24 44-37 65-40 64-112 145-71 81-101 106-69 57-140 57h-32v640h32q72 0 167 32t193.5 64 179.5 32q189 0 189-167 0-26-5-56 30-16 47.5-52.5t17.5-73.5-18-69q53-50 53-119 0-25-10-55.5t-25-47.5h331q52 0 90-38t38-90zm128-1q0 105-75.5 181t-180.5 76h-169q-4 62-37 119 3 21 3 43 0 101-60 178 1 139-85 219.5T961 1664q-133 0-322-69-164-59-223-59H128q-53 0-90.5-37.5T0 1408V768q0-53 37.5-90.5T128 640h288q10 0 21.5-4.5t23.5-14 22.5-18 24-22.5 20.5-21.5 19-21.5 14-17q65-74 100-129 13-21 33-62t37-72 40.5-63 55-49.5T896 128q125 0 206.5 67t81.5 189q0 68-22 128h374q104 0 180 76t76 179z">
+          </path>
+        </svg>
+        <p>Quảng bá sản phẩm của bạn đến hàng ngàn website bán hàng
+        </p>
+      </div>
+
+      <div class="icon-uto-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"
+          viewBox="0 0 1792 1896.0833" class="" fill="#000">
+          <path
+            d="M256 1344q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zm1408-576q0-51-39-89.5t-89-38.5H960q0-20 15-48.5t33-55 33-68 15-84.5q0-67-44.5-97.5T896 256q-24 0-90 139-24 44-37 65-40 64-112 145-71 81-101 106-69 57-140 57h-32v640h32q72 0 167 32t193.5 64 179.5 32q189 0 189-167 0-26-5-56 30-16 47.5-52.5t17.5-73.5-18-69q53-50 53-119 0-25-10-55.5t-25-47.5h331q52 0 90-38t38-90zm128-1q0 105-75.5 181t-180.5 76h-169q-4 62-37 119 3 21 3 43 0 101-60 178 1 139-85 219.5T961 1664q-133 0-322-69-164-59-223-59H128q-53 0-90.5-37.5T0 1408V768q0-53 37.5-90.5T128 640h288q10 0 21.5-4.5t23.5-14 22.5-18 24-22.5 20.5-21.5 19-21.5 14-17q65-74 100-129 13-21 33-62t37-72 40.5-63 55-49.5T896 128q125 0 206.5 67t81.5 189q0 68-22 128h374q104 0 180 76t76 179z">
+          </path>
+        </svg>
+        <p>Thành viên affiliate bán hàng tiếp thị lên đến hơn 30,000 người bán của UTO và các đối tác tiêu biểu như (SE,
+          DJC, ... )
+        </p>
+      </div>
+
+      <div class="button-reg-4">
+        <a href="#">Liên Hệ Với UTO Ngay Hôm Nay</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="bg-tree" id="chinh-sach">
+    <section>
+      <div class="container">
+        <div class="title-uto-7">
+          <h2>Chính Sách Ưu Đãi Đa Dạng Chỉ Có Tại <span style="color: rgb(0 102 187) ;"> UTO.VN</span></h2>
+          <p>Rất nhiều chương trình ưu đãi cực hấp dẫn được cập nhật mỗi tháng</p>
+        </div>
+
+        <div class="image-grid">
+
+          <a href="#" data-lightbox="homePortfolio" class="big wow zoomInRight">
+            <img class="wow rollIn" data-wow-delay=".2s" src="/assets/img/bn1.png" />
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <img class="wow rollIn" data-wow-delay=".4s" src="/assets/img/bn2.jpg" />
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <img class="wow rollIn" data-wow-delay=".6s" src="/assets/img/bn3.png" />
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <img class="wow rollIn" data-wow-delay=".8s" src="/assets/img/bn4.png" />
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <img class="wow rollIn" data-wow-delay="1s" src="/assets/img/bn5.jpg" />
+          </a>
+
+
+        </div>
+
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="title-uto-8">
+          <!-- <img src="/assets/img/dayleo.png" alt="...."> -->
+          <h2 class="title-uto-8-text1"> Đối Tác Tiêu Biểu</h2>
+          <h2 class="title-uto-8-text2"> UTO.VN</h2>
+        </div>
+
+        <!-- <div class="image-grid-brand">
+
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/ninja.png" />
+            </div>
+          </a>
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/diamon.png" />
+            </div>
+          </a>
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/best.png" />
+            </div>
+          </a>
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/se.png" />
+            </div>
+          </a>
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/ezin.png" />
+            </div>
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/logo/1.png" />
+            </div>
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/logo/2.png" />
+            </div>
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/logo/3.png" />
+            </div>
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/logo/4.png" />
+            </div>
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/logo/5.png" />
+            </div>
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/logo/6.png" />
+            </div>
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/logo/7.png" />
+            </div>
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/logo/8.png" />
+            </div>
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/logo/9.png" />
+            </div>
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/logo/10.png" />
+            </div>
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/logo/11.png" />
+            </div>
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/logo/12.png" />
+            </div>
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/logo/13.png" />
+            </div>
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn">
+              <img src="/assets/img/logo/14.png" />
+            </div>
+          </a>
+
+          <a href="#" data-lightbox="homePortfolio" class="horizontal">
+            <div class="ladi-img wow rollIn ">
+              <img src="/assets/img/logo/15.png" />
+            </div>
+          </a>
+
+        </div> -->
+
+
+
+
+
+        <!-- -------------------------swiper -->
+        <div class="row carousel">
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/ninja.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/diamon.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/best.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/se.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/ezin.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/logo/ic18.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/logo/ic17.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/logo/3.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/logo/4.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/logo/5.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/logo/6.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/logo/7.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/logo/8.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/logo/9.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/logo/10.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/logo/ic20.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/logo/ic19.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/logo/13.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/logo/14.png" /></div>
+          </div>
+          <div class=" col-sm-4 col-md-3  col-6">
+            <div class="card-content"> <img src="/assets/img/logo/15.png" /></div>
+          </div>
+        </div>
+
+        <!-- --------------------end swiper-------- -->
+
+      </div>
+    </section>
+  </div>
+
+
+  <section>
+    <div class="container">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="video-uto1 text-center wow bounceInLeft">
+            <iframe width="100%" height="363px" src="https://www.youtube.com/embed/HufZgS8D0iw"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-12">
+
+          <div class="sale-steps-title">
+            <h2>
+              Câu Hỏi Thường Gặp
+            </h2>
+          </div>
+
+
+          <div class="accordion accordion-flush" id="collapse">
+
+
+            <div class="accordion-item">
+              <h2 id="four" class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapeFour"
+                  aria-expanded="true" aria-controls="collapeFour">
+                  1. Mình muốn bán hàng với UTO thì cần phải làm gì, có khó không?
+                </button>
+              </h2>
+              <div id="collapeFour" class="accordion-collapse collapse show" aria-labelledby="four"
+                data-bs-parent="#collapse">
+                <div class="accordion-body">
+                  <span style="font-weight: bold;">Chỉ với 3 bước để bạn bắt đầu bán hàng ngay cùng UTO</span><br>
+                  Bước 1: Bạn đăng nhập vào tài khoản đã xác minh trên website UTO.VN<br>
+                  Bước 2: Truy cập vào kho tổng đa dạng các mặt hàng và chọn sản phẩm bạn muốn bán, chia sẻ hình ảnh
+                  thông tin sản phẩm qua Zalo, Facebook cho bất kỳ ai có nhu cầu mua sắm tiêu dùng.<br>
+                  Bước 3: Khi có đơn hàng, UTO sẽ đóng gói và vận chuyển trực tiếp đến khách hàng dưới thông tin của
+                  bạn.<br>
+                  Sau khi đơn hàng được giao thành công đến khách hàng, tiền hoa hồng sẽ được chuyển vào ví UPAY và bạn
+                  có thể rút về tài khoản ngân hàng bất kỳ lúc nào.<br>
+                  Ngoài ra, UTO còn cho phép khách hàng đổi hàng hóa trong vòng 7 ngày nếu xảy ra lỗi hoặc nhầm lầm
+                  trong quá trình vận chuyển.
+
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 id="one" class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapeOne" aria-expanded="false" aria-controls="collapeOne">
+                  2. Khách hàng của mình có được xem hàng trước khi nhận không?
+                </button>
+              </h2>
+              <div id="collapeOne" class="accordion-collapse collapse" aria-labelledby="one" data-bs-parent="#collapse">
+                <div class="accordion-body">
+                  Hoàn toàn có thể. UTO hỗ trợ cho khách hàng kiểm tra sản phẩm trước khi nhận để tránh tình trạng nhận
+                  về sản phẩm lỗi hay trầy xước trong quá trình giao hàng. Nếu trong quá trình kiểm tra, khách hàng thấy
+                  hàng hóa có vấn đề vui lòng quay lại quá trình khui hàng hoặc chụp hình sản phẩm và liên hệ trực tiếp
+                  tới UTO. UTO sẽ hỗ trợ nhanh nhất có thể trong giờ hành chính từ 9 – 18 giờ từ thứ 2 đến thứ 7 hàng
+                  tuần.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="two">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapeTwo" aria-expanded="false" aria-controls="collapeTwo">
+                  3. Hàng trên UTO có phải chính hãng không?
+                </button>
+              </h2>
+              <div id="collapeTwo" class="accordion-collapse collapse" aria-labelledby="two" data-bs-parent="#collapse">
+                <div class="accordion-body">
+                  Về vấn đề này các bạn hãy yên tâm, sản phẩm bên UTO được nhập trực tiếp từ nhà cung cấp, có giấy chứng
+                  nhận và xác minh nguồn gốc xuất xứ sản phẩm, cam kết hàng chính hãng 100%.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="three">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapeThree" aria-expanded="false" aria-controls="collapeThree">
+                  4. Làm sao mình có thể liên hệ được với UTO
+                </button>
+              </h2>
+              <div id="collapeThree" class="accordion-collapse collapse" aria-labelledby="three"
+                data-bs-parent="#collapse">
+                <div class="accordion-body">
+
+                  <span style="font-weight: bold;">Bạn có thể liên hệ với UTO qua 4 cách:</span> <br>
+                  1. Gọi trực tiếp đến số hotline UTO: 1900.88.66.33<br>
+                  2. Nhắn tin qua Fanpage chính thức UTO.VN hoặc UNIONTEK OFFICIAL<br>
+                  3. Nhắn tin qua Zalo Official Account: Công ty CPCNĐT UNIONTEK<br>
+                  4. Gửi mail về địa chỉ cskh@uto.vn<br>
+                  UTO luôn có các bạn tổng đài viên trực để hỗ trợ nhiệt tình và giải đáp các thắc mắc của các bạn.
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <div class="custom-bg-footer wow pulse" data-wow-duration="1.8s" data-wow-delay=".2s" data-wow-iteration="infinite">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"
+      viewBox="0 0 1920 212.3" fill="rgb(51 204 255)">
+      <defs>
+        <style>
+          .cls-1 {
+            opacity: 0.1;
+          }
+
+          .cls-2 {
+            opacity: 0.3;
+          }
+        </style>
+      </defs>
+      <path class="cls-1"
+        d="M1920,84.7V203H0V18.4a244.5,244.5,0,0,1,32.4-2.2A242.2,242.2,0,0,1,209.1,92.5,243.1,243.1,0,0,1,492.4,145a165.3,165.3,0,0,1,244.1,1.2,74,74,0,0,1,132.6-.6,165.3,165.3,0,0,1,240.6-35.8,242.9,242.9,0,0,1,339.4,26.9,57.6,57.6,0,0,1,83.2,9.3,165.5,165.5,0,0,1,200-69.3,94,94,0,0,1,187.6,8Z"
+        transform="translate(0 9.3)"></path>
+      <path class="cls-2"
+        d="M1920,94.4V203H0V28.2A244.5,244.5,0,0,1,32.4,26a242.2,242.2,0,0,1,176.6,76.2,243.1,243.1,0,0,1,283.4,52.5,165.3,165.3,0,0,1,244.1,1.2,74,74,0,0,1,132.6-.6,165.3,165.3,0,0,1,240.6-35.8,242.9,242.9,0,0,1,339.4,26.9,57.6,57.6,0,0,1,83.2,9.3,165.5,165.5,0,0,1,200-69.3,94,94,0,0,1,187.6,8Z"
+        transform="translate(0 9.3)"></path>
+      <path class="cls-3"
+        d="M1920,104.2V203H0V37.9a244.5,244.5,0,0,1,32.4-2.2,242.2,242.2,0,0,1,176.6,76.2,243.1,243.1,0,0,1,283.4,52.5,165.3,165.3,0,0,1,244.1,1.2,74,74,0,0,1,132.6-.6,165.3,165.3,0,0,1,240.6-35.8,242.9,242.9,0,0,1,339.4,26.9,57.6,57.6,0,0,1,83.2,9.3,165.5,165.5,0,0,1,200-69.3,94,94,0,0,1,187.6,8Z"
+        transform="translate(0 9.3)"></path>
+    </svg>
+  </div> -->
+
+  <div class="header-footer">
+    <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(51,204,255,0.6" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(51,204,255,0.4)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(51,204,255,0.2)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(51 204 255)" />
+        </g>
+      </svg>
+    </div>
+  </div>
+
+
+  <footer class="bg-footer">
+    <div class="container ">
+
+      <div class="content-footer">
+        <div class="flex-item">
+
+          <div class="flex-icon-footer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"
+              viewBox="0 0 24 24" class="" fill="rgba(232, 104, 48, 1)">
+              <path
+                d="M12,2C15.31,2 18,4.66 18,7.95C18,12.41 12,19 12,19C12,19 6,12.41 6,7.95C6,4.66 8.69,2 12,2M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6M20,19C20,21.21 16.42,23 12,23C7.58,23 4,21.21 4,19C4,17.71 5.22,16.56 7.11,15.83L7.75,16.74C6.67,17.19 6,17.81 6,18.5C6,19.88 8.69,21 12,21C15.31,21 18,19.88 18,18.5C18,17.81 17.33,17.19 16.25,16.74L16.89,15.83C18.78,16.56 20,17.71 20,19Z">
+              </path>
+            </svg>
+            <p>240 Nguyễn Oanh, P.17, Gò Vấp, TP.HCM</p>
+          </div>
+
+          <div class="flex-icon-footer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"
+              viewBox="0 0 24 24" class="" fill="rgba(232, 104, 48, 1)">
+              <path
+                d="M4,3A1,1 0 0,0 3,4A17,17 0 0,0 20,21A1,1 0 0,0 21,20V16.5A1,1 0 0,0 20,15.5C18.75,15.5 17.55,15.3 16.43,14.93C16.08,14.82 15.69,14.9 15.41,15.17L13.21,17.37C10.38,15.93 8.06,13.62 6.62,10.78L8.82,8.57C9.1,8.31 9.18,7.92 9.07,7.57C8.7,6.45 8.5,5.25 8.5,4A1,1 0 0,0 7.5,3H4M19,11V9.5H15.5L21,4L20,3L14.5,8.5V5H13V11H19Z">
+              </path>
+            </svg>
+            <p>1900 88 66 33</p>
+          </div>
+
+          <div class="flex-icon-footer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"
+              viewBox="0 0 1792 1896.0833" class="" fill="rgba(232, 104, 48, 1)">
+              <path
+                d="M1664 1504V736q-32 36-69 66-268 206-426 338-51 43-83 67t-86.5 48.5T897 1280h-2q-48 0-102.5-24.5T706 1207t-83-67q-158-132-426-338-37-30-69-66v768q0 13 9.5 22.5t22.5 9.5h1472q13 0 22.5-9.5t9.5-22.5zm0-1051v-24.5l-.5-13-3-12.5-5.5-9-9-7.5-14-2.5H160q-13 0-22.5 9.5T128 416q0 168 147 284 193 152 401 317 6 5 35 29.5t46 37.5 44.5 31.5T852 1143t43 9h2q20 0 43-9t50.5-27.5 44.5-31.5 46-37.5 35-29.5q208-165 401-317 54-43 100.5-115.5T1664 453zm128-37v1088q0 66-47 113t-113 47H160q-66 0-113-47T0 1504V416q0-66 47-113t113-47h1472q66 0 113 47t47 113z">
+              </path>
+            </svg>
+            <p>cskh@uto.vn</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-custom ">
+        <div class="col-lg-6 col-md-6 col-12">
+          <img src="/assets/img/logo-white.png" class="img-logo-header mb-3" alt="...">
+          <p>Công Ty Cổ Phần Công Nghệ Đào Tạo Uniontek</p>
+
+          <div class="flex-text-footer">
+            <div class="text-footer-custom1">
+              <p>Website:</p>
+              <p>https://uto.vn/</p>
+              <p>https://uto.net.vn/</p>
+              <p>https://uniontek.vn/</p>
+            </div>
+            <div class="text-footer-custom2">
+              <p>Dành cho người bán</p>
+              <p>Dành cho nhà cung cấp</p>
+              <p>Giải pháp cho doanh nghiệp</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 col-12">
+          <h4>Theo dõi chúng tôi</h4>
+          <div class="social-icon">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="input-group custom-input my-3">
+            <input type="text" aria-label="First name" class="form-control"
+              placeholder="Vui lòng nhập số điện thoại...">
+            <a href="#" class="input-group-text"><i class="fa-solid fa-paper-plane"></i></a>
+          </div>
+          <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Để lại tin nhắn cho chúng tôi..."
+            rows="4"></textarea>
+        </div>
+
+      </div>
+
+
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+  <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+  <script src="/assets/style.js"></script>
+  <script src="/assets/particles.js"></script>
+</body>
+
+</html>
